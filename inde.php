@@ -56,25 +56,31 @@
          <form id="horariofrm">
             <label  >Nombre:</label>
            <!-- <input placeholder="Nombre del Profesor" class="form-control" type="text" name="nombre" -->
-           <select name="nombre" id="" placeholder="Nombre del Profesor" class="form-control">
+           <select  name="nombre" id="" placeholder="Nombre del Profesor" class="form-control">
 
 
-           <?php 
+    <option value="">
+    
+    <?php 
 $conexion=mysql_connect("localhost","root","") or
 die("Problemas en la conexion");
 mysql_select_db("horarioescolar",$conexion) or
 die("Problemas en la selección de la base de datos");  
 mysql_query ("SET usuario 'utf8'");
-$clavebuscadah=mysql_query("select usuario from usuarios WHERE tipo_usuario = 'Administrador'",$conexion) or
+$clavebuscadah=mysql_query("select  usuario  from usuarios WHERE tipo_usuario = 'Administrador'",$conexion) or
 die("Problemas en el select:".mysql_error());
 while($row = mysql_fetch_array($clavebuscadah))
 {
-echo'<OPTION VALUE="'.$row['id_usuario'].'">'.$row['usuario'].'</OPTION>';
+echo'<OPTION VALUE="'.$row['usuario'].'">'.$row['usuario'].'</OPTION>';
+
+
 
 
 }
  
 ?>
+
+    </option>
 
            </select>
             <label>Dias:</label>

@@ -68,7 +68,14 @@ require_once'include/functions.php';
         
         <form id="taskfrm">
            <label>Tarea</label>
-           <input class="form-control" type="text" id="nametask" >
+           <!--<input class="form-control" type="text" id="nametask" >-->
+           <select class="form-control" id="nametask">
+           
+           <option value="">
+           asdasd
+           </option>
+           
+           </select>
            <label>Color:</label>
            <select class="form-control" id="idcolortask">
               <option value="purple-label">Purpura</option>

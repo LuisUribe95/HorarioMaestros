@@ -67,15 +67,16 @@ require_once'include/functions.php';
       <div class="modal-body">
         
         <form id="taskfrm">
-           <label>Tarea</label>
+           <label>Tareas</label>
            <!--<input class="form-control" type="text" id="nametask" >-->
-           <select class="form-control" id="nametask">
+           <select  name="nombre"  placeholder="Nombre del Profesor" class="form-control">
            
            <option value="">
            asdasd
            </option>
            
            </select>
+
            <label>Color:</label>
            <select class="form-control" id="idcolortask">
               <option value="purple-label">Purpura</option>

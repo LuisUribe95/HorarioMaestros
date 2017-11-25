@@ -69,10 +69,27 @@ require_once'include/functions.php';
         <form id="taskfrm">
            <label>Tareas</label>
            <!--<input class="form-control" type="text" id="nametask" >-->
-           <select  name="nombre"  placeholder="Nombre del Profesor" class="form-control">
-           
+           <select  name="nombre" id="nametask" placeholder="Nombre del Profesor" class="form-control">
+           <?php 
+$conexion=mysql_connect("localhost","root","") or
+die("Problemas en la conexion");
+mysql_select_db("horarioescolar",$conexion) or
+die("Problemas en la selección de la base de datos");  
+mysql_query ("SET nombre 'utf8'");
+$clavebuscadah=mysql_query("select  nombre  from materias",$conexion) or
+die("Problemas en el select:".mysql_error());
+while($row = mysql_fetch_array($clavebuscadah))
+{
+echo'<OPTION VALUE="'.$row['nombre'].'">'.$row['nombre'].'</OPTION>';
+
+
+
+
+}
+ 
+?>
            <option value="">
-           asdasd
+        
            </option>
            
            </select>

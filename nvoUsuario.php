@@ -35,21 +35,25 @@ echo "El Usuario $username ha Sido Registrado de Manera Satisfactoria. Ahora Pue
 
 <form class="login" action="nvoUsuario.php" method="post">
 
-<input placeholder="Nombre de Usuario" maxlength="25" size="25" name="username" />
+
+
+<input placeholder="Nombre Completo" maxlength="25" size="25" name="username" />
 <br />
 <input placeholder="Contraseña" type="password" maxlength="25" size="25" name="password"  />
 <br />
 
-<div class="mainSelecti">
+<div id="mainselection" class="mainselection">
 
-<select class="tipo" name="TipoUsuario">
-<option value="">Elije un Usuario</option>
-<option>Administrador</option>
 
-<option>Prefecto</option>
+<select id="mainselection" class="tipo" name="TipoUsuario">
+<option value="">Elija un Usuario</option>
+<option value="Administrador" >Administrador</option>
+
+<option value="Prefecto" >Prefecto</option>
+<option value="Maestro">Maestro</option>
 
 </select>
-<br />
+
 </div>
 
 

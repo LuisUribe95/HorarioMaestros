@@ -66,8 +66,8 @@ $conexion=mysql_connect("localhost","root","") or
 die("Problemas en la conexion");
 mysql_select_db("horarioescolar",$conexion) or
 die("Problemas en la selección de la base de datos");  
-mysql_query ("SET usuario 'utf8'");
-$clavebuscadah=mysql_query("select  usuario  from usuarios WHERE tipo_usuario = 'Administrador'",$conexion) or
+mysql_query ("SET usuario 'utf-8'");
+$clavebuscadah=mysql_query("select  usuario  from usuarios WHERE tipo_usuario = 'Maestro'",$conexion) or
 die("Problemas en el select:".mysql_error());
 while($row = mysql_fetch_array($clavebuscadah))
 {

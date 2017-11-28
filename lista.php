@@ -67,7 +67,7 @@ require_once'include/functions.php';
       <div class="modal-body">
         
         <form id="taskfrm">
-           <label>Tareas</label>
+           <label>Materias</label>
            <!--<input class="form-control" type="text" id="nametask" >-->
            <select  name="nombre" id="nametask" placeholder="Nombre del Profesor" class="form-control">
            <?php 

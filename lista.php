@@ -28,7 +28,7 @@ require_once'include/functions.php';
     <div id="menu" class="col-md-12 text-right">
       <div class="container">
           <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
-          <a class="btn btn-warning" href="inde.php"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</a>
+          
       </div>
     </div>
     <!-- menu -->
@@ -62,7 +62,7 @@ require_once'include/functions.php';
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close canceltask" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
-        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-thumb-tack"></i> Agregar Tarea</h4>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-thumb-tack"></i> Agregar Materia</h4>
       </div>
       <div class="modal-body">
         

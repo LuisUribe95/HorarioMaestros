@@ -23,10 +23,10 @@ $tablaMaestr = mysqli_query($conexion, $consultaD);
 	}
 	else if(mysqli_num_rows($tablaPrecto) >0 ){
 	$_SESSION['usr'] = $usr;
-	header ("location:seleccion.html");
+	header ("location:MaestroPrefecto.php");
 	}	
 	else if(mysqli_num_rows($tablaMaestr) >0 ){
 	$_SESSION['usr'] = $usr;
-	header ("location:index.html");
+	header ("location:MaestroPrefecto.php");
 	}	
 ?>

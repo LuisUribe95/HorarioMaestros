@@ -9,6 +9,7 @@
 <img  src="logo.png" alt="BENEMÉRITA ESCUELA NORMAL DE COAHUILA">
 	<div class="login">
 		
+		
     <form method="post" id="formlg" action="login.php">
     	<input type="text" name="u" placeholder="Username" required="required" />
         <input type="password" name="p" placeholder="Password" required="required" />

@@ -11,9 +11,10 @@
 		
 		
     <form method="post" id="formlg" action="login.php">
-    	<input type="text" name="u" placeholder="Username" required="required" />
-        <input type="password" name="p" placeholder="Password" required="required" />
-        <button action="alass.php" type="submit" class="btn btn-primary btn-block btn-large">Ingresa.</button>
+    	<input type="text" name="u" placeholder="Usuario" required="required" />
+        <input type="password" name="p" placeholder="Contraseña" required="required" />
+		<button action="alass.php" type="submit" class="btn btn-primary btn-block btn-large">Ingresa.</button>
+		<a href="nvoUsuario.php">Registrate</a>
     </form>
 </div>
 

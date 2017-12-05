@@ -62,8 +62,10 @@ echo "El Usuario $username ha Sido Registrado de Manera Satisfactoria. Ahora Pue
 
 
 <button type="submit" value="Registrar"  class="btn btn-primary btn-block btn-large">Registrar Usuario </button>
+
     <link rel="stylesheet" href="css/nuevoUsuario.css">
     
     <script type="text/javascript" src="js/label.js"></script>
+    
 </form>
 

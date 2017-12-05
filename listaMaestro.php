@@ -1,6 +1,6 @@
 <?php
 include 'include/config.php';
-require_once'include/functions.php';
+require_once'include/functions2.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +27,8 @@ require_once'include/functions.php';
     <!-- menu -->
     <div id="menu" class="col-md-12 text-right">
       <div class="container">
-          <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
-          <a class="btn btn-warning" href="inde.php"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</a>
+          <a class="btn btn-primary" href="listaMaestro.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
+          
           <a class="btn btn-danger" href="cerrarSesion.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Salir</a>
       </div>
     </div>

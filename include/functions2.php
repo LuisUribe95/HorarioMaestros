@@ -57,7 +57,7 @@ function horariostable($page){
                 <td>
                 <button data-id="'.$key['id'].'" class="verhorario btn btn-sm btn-success"><i class="fa fa-pencil-square-o"></i> Ver Horario</button>
                   <a target="_blank" href="imprimir.php?horario='.$key['id'].'" class="imprimir btn btn-sm btn-warning"><i class="fa fa-print"></i> Imprimir</a>
-                  <button data-id="'.$key['id'].'" class="delhorario btn btn-sm btn-danger"><i class="fa fa-times"></i> Eliminar</button>
+                  
                 </td>
               </tr>
             ';

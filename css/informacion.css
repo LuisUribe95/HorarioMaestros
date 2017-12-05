@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    color: red;
+    font-size: 120px;
+    
+
+}
+p{
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    padding: 15px;
+
+}

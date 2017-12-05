@@ -23,8 +23,12 @@
     <!-- menu -->
     <div id="menu" class="col-md-12 text-right">
       <div class="container">
-          <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
-          <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</button>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</button>    
+      <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
+          
+          <a class="btn btn-info" href="informacion.html"><i class="fa fa-info" aria-hidden="true"></i> informacion</a>
+          <a class="btn btn-danger" href="cerrarSesion.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Salir</a>
+         
       </div>
     </div>
     <!-- menu -->
@@ -33,7 +37,11 @@
     <!-- container -->
       <div class="container">
        <div id="clockindex" class="col-sm-12 text-center">
-         <i class="fa fa-calendar-plus-o icon-clock-index animated infinite pulse" aria-hidden="true"></i>
+         <i class="fa fa-calendar-plus-o icon-clock-index animated infinite pulse" aria-hidden="true">
+           <p>Ingresar a la opcion de informacion</p>
+         </i>
+         
+         
        </div>
        <div id="mynew" class="col-sm-12">
           
@@ -50,6 +58,7 @@
       <div class="modal-header">
         <button type="button" class="close cancel-new" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
         <h4 class="modal-title" id="myModalLabel"><i class="fa fa-calendar"></i> Nuevo Horario</h4>
+        
       </div>
       <div class="modal-body">
         
@@ -108,6 +117,7 @@ echo'<OPTION VALUE="'.$row['usuario'].'">'.$row['usuario'].'</OPTION>';
 
       </div>
       <div class="modal-footer">
+      
         <button type="button" class="create-horario btn btn-success"><i class="fa fa-calendar-check-o"></i> Crear</button>
         <button type="button" class="cancel-new btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
       </div>
@@ -127,9 +137,33 @@ echo'<OPTION VALUE="'.$row['usuario'].'">'.$row['usuario'].'</OPTION>';
       </div>
       <div class="modal-body">
         
+
+
+
         <form id="taskfrm">
-           <label>Tarea</label>
-           <input class="form-control" type="text" id="nametask" >
+           <label>Materias</label>
+           <select  name="nombre" id="" placeholder="Nombre del Profesor" class="form-control">
+<option value="">
+  <?php 
+$conexion=mysql_connect("localhost","root","") or
+die("Problemas en la conexion");
+mysql_select_db("horarioescolar",$conexion) or
+die("Problemas en la selección de la base de datos");  
+mysql_query ("SET usuario 'utf-8'");
+$clavebuscadah=mysql_query("select  nombre  from materias",$conexion) or
+die("Problemas en el select:".mysql_error());
+while($row = mysql_fetch_array($clavebuscadah))
+{
+echo'<OPTION VALUE="'.$row['nombre'].'">'.$row['nombre'].'</OPTION>';
+}
+ ?>
+   </option>
+    </select>
+
+
+
+
+
            <label>Color:</label>
            <select class="form-control" id="idcolortask">
               <option value="purple-label">Purpura</option>

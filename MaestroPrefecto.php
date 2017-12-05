@@ -23,8 +23,8 @@
     <!-- menu -->
     <div id="menu" class="col-md-12 text-right">
       <div class="container">
-          <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
-        
+          <a class="btn btn-primary" href="listaMaestro.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
+          <a class="btn btn-danger" href="cerrarSesion.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Salir</a>
       </div>
     </div>
     <!-- menu -->
@@ -128,8 +128,31 @@ echo'<OPTION VALUE="'.$row['usuario'].'">'.$row['usuario'].'</OPTION>';
       <div class="modal-body">
         
         <form id="taskfrm">
-           <label>Tarea</label>
-           <input class="form-control" type="text" id="nametask" >
+           <label>Materia</label>
+           <select  name="nombre" id="" placeholder="AgregarMateria" class="form-control">
+
+
+    <option value="">
+    
+    <?php 
+$conexion=mysql_connect("localhost","root","") or
+die("Problemas en la conexion");
+mysql_select_db("horarioescolar",$conexion) or
+die("Problemas en la selección de la base de datos");  
+mysql_query ("SET usuario 'utf-8'");
+$clavebuscadah=mysql_query("select  usuario  from usuarios WHERE tipo_usuario = 'Maestro'",$conexion) or
+die("Problemas en el select:".mysql_error());
+while($row = mysql_fetch_array($clavebuscadah))
+{
+echo'<OPTION VALUE="'.$row['usuario'].'">'.$row['usuario'].'</OPTION>';
+
+
+
+
+}
+ 
+?>
+
            <label>Color:</label>
            <select class="form-control" id="idcolortask">
               <option value="purple-label">Purpura</option>

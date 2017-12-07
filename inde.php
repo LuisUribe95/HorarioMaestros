@@ -23,9 +23,12 @@
     <!-- menu -->
     <div id="menu" class="col-md-12 text-right">
       <div class="container">
-      <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</button>    
+      <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-check-o"> </i> Nuevo Horario</button>    
+
+
+
       <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
-          
+      <a class="btn btn-primary" href="agregarMateria.php"><i class="fa fa-calendar" aria-hidden="true"></i> Registra Materia</a>
           <a class="btn btn-info" href="informacion.html"><i class="fa fa-info" aria-hidden="true"></i> informacion</a>
           <a class="btn btn-danger" href="cerrarSesion.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Salir</a>
          
@@ -99,8 +102,7 @@ echo'<OPTION VALUE="'.$row['usuario'].'">'.$row['usuario'].'</OPTION>';
                <a data-day="3" class="day-option">Miercoles</a>
                <a data-day="4" class="day-option">Jueves</a>
                <a data-day="5" class="day-option">Viernes</a>
-               <a data-day="6" class="day-option">Sabado</a>
-               <a data-day="7" class="day-option">Domingo</a>
+
             </div>
             <input id="days-chose" class="form-control" type="text" name="days" >
             <label>Inicio:</label>

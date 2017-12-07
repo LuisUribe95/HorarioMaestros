@@ -4,9 +4,10 @@
     {
         $conn = null;
         $host = 'localhost';
-        $db = 'horarioescolar';
-        $user = 'root';
-        $pwd = '';
+        $db =   'horarioescolar';
+        $user = 'dawebits';
+        $pwd =  'claseDAWEB';
+        
         try{
             $conn = new PDO('mysql:host='.$host.';dbname='.$db, $user, $pwd);
         }

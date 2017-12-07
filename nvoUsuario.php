@@ -1,6 +1,8 @@
 <?php
 //conexion al servidor web y bd
-$conexionBD = @mysql_connect('localhost', 'root', '') or die('No pudo conectarse al servidor de Base de Datos Mysql: ' . mysql_error());
+
+
+$conexionBD = @mysql_connect('localhost', 'dawebits', 'claseDAWEB') or die('No pudo conectarse al servidor de Base de Datos Mysql: ' . mysql_error());
 //seleccionar base de datos
 mysql_select_db('horarioescolar') or die('No se puede abrir la estructura de BD' . mysql_error());
 
@@ -62,7 +64,7 @@ echo "El Usuario $username ha Sido Registrado de Manera Satisfactoria. Ahora Pue
 
 
 <button type="submit" value="Registrar"  class="btn btn-primary btn-block btn-large">Registrar Usuario </button>
-
+<a href="ind.php">Iniciar Sesion</a>
     <link rel="stylesheet" href="css/nuevoUsuario.css">
     
     <script type="text/javascript" src="js/label.js"></script>

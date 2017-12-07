@@ -18,8 +18,10 @@ img{
   margin: 0 auto;
 }
 a{
-  text-align: center;
-  color: white;
+  text-align: right;
+  color: whitesmoke;
+  text-decoration: none;
+  
 }
 
 body { 

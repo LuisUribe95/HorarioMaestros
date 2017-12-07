@@ -17,6 +17,11 @@ img{
   display:block;
   margin: 0 auto;
 }
+a{
+  text-align: center;
+  color: whitesmoke;
+  text-decoration: none;
+}
 
 body { 
   width: 100%;

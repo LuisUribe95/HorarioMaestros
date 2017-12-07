@@ -31,7 +31,7 @@ if (is_numeric($_GET['horario']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Horarios | JHCodes</title>
+    <title>Imprimir Horario</title>
 
     <!-- Bootstrap -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>

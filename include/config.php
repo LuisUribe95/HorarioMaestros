@@ -12,8 +12,9 @@ class Conexion
 
             $host = 'localhost';
             $db =   'horarioescolar';
-            $user = 'root';
-            $pwd =  '';
+            $user = 'dawebits';
+            $pwd =  'claseDAWEB';
+           
             $this->dbh = new PDO('mysql:host='.$host.';dbname='.$db, $user, $pwd);
             $this->dbh->exec("SET CHARACTER SET utf8");
 

@@ -10,7 +10,18 @@
     <!-- Bootstrap -->
     <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet">
-
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- datetimepicker -->
+    <script src="js/moment-with-locales.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <!-- validate -->
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <!-- script -->
+    <script src="js/script.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -74,7 +85,10 @@
     <option value="">
     
     <?php 
-$conexion=mysql_connect("localhost","root","") or
+
+require_once 'include/config.php';
+require_once'include/functions.php';
+$conexion=mysql_connect("localhost","dawebits","claseDAWEB") or
 die("Problemas en la conexion");
 mysql_select_db("horarioescolar",$conexion) or
 die("Problemas en la selección de la base de datos");  
@@ -195,18 +209,7 @@ echo'<OPTION VALUE="'.$row['nombre'].'">'.$row['nombre'].'</OPTION>';
 <!-- alert danger -->
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- datetimepicker -->
-    <script src="js/moment-with-locales.js"></script>
-    <script src="js/bootstrap-datetimepicker.js"></script>
-    <!-- validate -->
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/additional-methods.min.js"></script>
-    <!-- script -->
-    <script src="js/script.js"></script>
+   
 
   </body>
 </html>

@@ -160,25 +160,33 @@ echo '</tbody></table>
 #--------------------------------------------------------------------------------------------------
 
 if(empty($_POST['nombre']) || empty($_POST['horario'])){
+  echo "error2";
   exit();
+  echo "error2";
 }
 if(ctype_space($_POST['nombre']) || ctype_space($_POST['horario'])){
+  echo "error2";
   exit();
+  echo "error2";
 }
 
 $fecha = date('Y-m-d');
 $data = $_POST['horario'];
 $nombre = $_POST['nombre'];
-
-
+echo "error2";
+echo "error2";
 $SQL = 'INSERT INTO horarios (nombre, horario, fecha) VALUES (:nombre,  :horario, :fecha);';
+exit($SQL);
 $sentence = $conexion -> prepare($SQL);
+echo "error1";
 $sentence -> bindParam(':nombre',$nombre,PDO::PARAM_STR);
-
+echo "error3";
 $sentence -> bindParam(':horario',$data,PDO::PARAM_STR);
-$sentence -> bindParam(':fecha',$fecha,PDO::PARAM_STR);
+echo "errorx";
+$sentence -4> bindParam(':fecha',$fecha,PDO::PARAM_STR);
+echo "error5";
 $sentence -> execute();
-
+echo "error6";
 
 #--------------------------------------------------------------------------------------------------
 }elseif ($process == 3) {

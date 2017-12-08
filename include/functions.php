@@ -38,7 +38,7 @@ function horariostable($page){
                       <thead class="messages-table-header">
                          <tr>
                            <th><i class="fa fa-angle-double-right"></i> Nombre</th>
-                           
+                           <th><i class="fa fa-angle-double-right"></i> Descripción</th>
                            <th><i class="fa fa-angle-double-right"></i> Fecha</th>
                            <th><i class="fa fa-angle-double-right"></i> Acciones</th>
                          </tr>
@@ -53,9 +53,10 @@ function horariostable($page){
             echo '
               <tr id="trhorario'.$key['id'].'">
                 <td>'.$key['nombre'].'</td>
+                <td>'.$key['descripcion'].'</td>
                 <td>'.$fecha.'</td>
                 <td>
-                <button data-id="'.$key['id'].'" class="verhorario btn btn-sm btn-success"><i class="fa fa-pencil-square-o"></i> Ver Horario</button>
+                  <button data-id="'.$key['id'].'" class="verhorario btn btn-sm btn-success"><i class="fa fa-pencil-square-o"></i> Ver Horario</button>
                   <a target="_blank" href="imprimir.php?horario='.$key['id'].'" class="imprimir btn btn-sm btn-warning"><i class="fa fa-print"></i> Imprimir</a>
                   <button data-id="'.$key['id'].'" class="delhorario btn btn-sm btn-danger"><i class="fa fa-times"></i> Eliminar</button>
                 </td>

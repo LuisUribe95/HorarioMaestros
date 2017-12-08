@@ -86,9 +86,7 @@
     
     <?php 
 
-require_once 'include/config.php';
-require_once'include/functions.php';
-$conexion=mysql_connect("localhost","dawebits","claseDAWEB") or
+$conexion=mysql_connect("localhost","root","") or
 die("Problemas en la conexion");
 mysql_select_db("horarioescolar",$conexion) or
 die("Problemas en la selección de la base de datos");  

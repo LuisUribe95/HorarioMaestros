@@ -2,7 +2,7 @@
 
 session_start();
 //conexion al servidor de base de datos
-$conexion = mysqli_connect('localhost', 'dawebits', 'claseDAWEB', 'horarioescolar') or die ('No pudo conectarse a servidor de Base de Datos MySql: '.mysql_error());
+$conexion = mysqli_connect('localhost', 'root', '', 'horarioescolar') or die ('No pudo conectarse a servidor de Base de Datos MySql: '.mysql_error());
 
 //seleccionar base de datos kardex
 //mysql_select_db('kardex') or die ('No se puede abrir la estructura de BD'.mysql_error());

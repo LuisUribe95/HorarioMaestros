@@ -147,7 +147,7 @@ sumtime($inicio24,$final24,$_POST['minutos'],$countdays);
 ///////////////////////////////////////////////////////
 echo '</tbody></table>
 
-
+<input type="hidden" id="descripcioninput" value="'.$_POST['descripcion'].'">
 <input type="hidden" id="nombreinput" value="'.$_POST['nombre'].'">
 
 <button class="guardarhorario btn btn-lg btn-warning pull-right"><i class="fa fa-floppy-o"></i> Guardar</button>
@@ -159,34 +159,25 @@ echo '</tbody></table>
 }elseif ($process == 2) {
 #--------------------------------------------------------------------------------------------------
 
-if(empty($_POST['nombre']) || empty($_POST['horario'])){
-  echo "error2";
+if(empty($_POST['nombre']) || empty($_POST['horario']) || empty($_POST['descripcion'])){
   exit();
-  echo "error2";
 }
-if(ctype_space($_POST['nombre']) || ctype_space($_POST['horario'])){
-  echo "error2";
+if(ctype_space($_POST['nombre']) || ctype_space($_POST['horario']) || ctype_space($_POST['descripcion'])){
   exit();
-  echo "error2";
 }
 
 $fecha = date('Y-m-d');
 $data = $_POST['horario'];
 $nombre = $_POST['nombre'];
-echo "error2";
-echo "error2";
+
+
 $SQL = 'INSERT INTO horarios (nombre, horario, fecha) VALUES (:nombre,  :horario, :fecha);';
-exit($SQL);
 $sentence = $conexion -> prepare($SQL);
-echo "error1";
 $sentence -> bindParam(':nombre',$nombre,PDO::PARAM_STR);
-echo "error3";
 $sentence -> bindParam(':horario',$data,PDO::PARAM_STR);
-echo "errorx";
-$sentence -4> bindParam(':fecha',$fecha,PDO::PARAM_STR);
-echo "error5";
+$sentence -> bindParam(':fecha',$fecha,PDO::PARAM_STR);
 $sentence -> execute();
-echo "error6";
+
 
 #--------------------------------------------------------------------------------------------------
 }elseif ($process == 3) {
@@ -232,13 +223,11 @@ if(ctype_space($_POST['nombre']) || ctype_space($_POST['horario']) || ctype_spac
 
 $data = $_POST['horario'];
 $nombre = $_POST['nombre'];
-
 $iddata = $_POST['id'];
 
-$SQL = 'UPDATE horarios SET nombre =:nombre,horario = :horario WHERE id = :id';
+$SQL = 'UPDATE horarios SET nombre =:nombre,  horario = :horario WHERE id = :id';
 $sentence = $conexion -> prepare($SQL);
 $sentence -> bindParam(':nombre', $nombre ,PDO::PARAM_STR);
-
 $sentence -> bindParam(':horario', $data ,PDO::PARAM_STR);
 $sentence -> bindParam(':id', $iddata ,PDO::PARAM_INT);
 $sentence -> execute();

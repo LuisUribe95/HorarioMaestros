@@ -29,7 +29,6 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `horarios` (
   `id` bigint(20) NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
-  `descripcion` varchar(250) DEFAULT NULL,
   `horario` text,
   `fecha` date DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;

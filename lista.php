@@ -23,21 +23,6 @@ require_once'include/functions.php';
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- datetimepicker -->
-    <script src="js/moment-with-locales.js"></script>
-    <script src="js/bootstrap-datetimepicker.js"></script>
-    <!-- validate -->
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/additional-methods.min.js"></script>
-    <!-- script -->
-    <script src="js/scripts-custom.js"></script>
-
-
   </head>
   <body>
 
@@ -91,7 +76,7 @@ require_once'include/functions.php';
 
 <option value="">
            <?php 
-$conexion=mysql_connect("localhost","dawebits","claseDAWEB") or
+$conexion=mysql_connect("localhost","root","") or
 die("Problemas en la conexion");
 mysql_select_db("horarioescolar",$conexion) or
 die("Problemas en la selección de la base de datos");  
@@ -140,7 +125,18 @@ echo'<OPTION VALUE="'.$row['nombre'].'">'.$row['nombre'].'</OPTION>';
     <!-- alert danger -->
 
 
-    
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- datetimepicker -->
+    <script src="js/moment-with-locales.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <!-- validate -->
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <!-- script -->
+    <script src="js/scripts-custom.js"></script>
 
   </body>
 </html>

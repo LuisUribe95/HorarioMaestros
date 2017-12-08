@@ -5,8 +5,8 @@
         $conn = null;
         $host = 'localhost';
         $db =   'horarioescolar';
-        $user = 'dawebits';
-        $pwd =  'claseDAWEB';
+        $user = 'root';
+        $pwd =  '';
         
         try{
             $conn = new PDO('mysql:host='.$host.';dbname='.$db, $user, $pwd);
